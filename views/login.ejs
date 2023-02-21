@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+    <% if (error) { %>
+      <p style="color: red;"><%= error %></p>
+    <% } %>
+    <% if (user && user !== 'not logged in') { %>
+      <p>Logged in as <%= user %>.</p>
+    <% } else { %>
+      <p>Not logged in.</p>
+    <% } %>
+    <form method="POST" action="/login">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
