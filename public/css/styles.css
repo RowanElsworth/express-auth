@@ -1,0 +1,195 @@
+body {
+  background: rgb(180, 180, 180);
+}
+
+.add {
+  margin-top:10px;
+  display: none;
+  width: 680px;
+  height:180px;
+  background-color: white;
+  border: solid 2px rgb(239, 239, 239);
+  position: absolute;
+  flex-direction: row;
+  flex-flow: overflow;
+  margin-left:calc(50% - 340px);
+}
+
+.add .symbolcontainer {
+  width:150px;
+  background: rgb(239, 239, 239);
+  height:150px;
+  padding:10px;
+  margin:15px;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 2s;
+}
+
+.add .symbolcontainer:hover {
+  background: rgb(255, 255, 255);
+}
+
+.add .symbolcontainer h1 {
+  font-size: 10pt;
+}
+
+.add .symbolcontainer img {
+  width:100px;
+  padding:10px;
+  transition-duration: 2s;
+}
+
+.add .symbolcontainer img:hover {
+  transition-duration: 2s;
+  width:120px;
+  padding:10px;
+}
+
+.addbutton {
+  text-align: center;
+  width:95%;
+  margin:auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition-duration: 2s;
+  margin-top:10px;
+}
+
+.addbutton hr {
+  width:49%;
+  height: 3px;
+  position: inherit;
+  background: rgb(158, 158, 158);
+}
+
+.addbutton img {
+  width:35px;
+}
+
+.addbutton:hover {
+  width:75%;
+  transition-duration: 2s;
+}
+
+.panel {
+  margin-top:10px;
+  margin-left: 2.5%;
+  width:95%;
+  height:fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+.onethird {
+  width:32%;
+  margin-right: 0.5%;
+  margin-left:0.5%;
+  border: dashed gray 1px;
+}
+
+.twothird {
+  width:65%;
+  margin-right: 0.5%;
+  margin-left:0.5%;
+  border: dashed gray 1px;
+}
+
+.threethird {
+  width:98%;
+  margin-right: 0.5%;
+  margin-left:0.5%;
+  border: dashed gray 1px;
+}
+
+.compadd {
+min-height: 150px;
+}
+
+.compadd img {
+  width:35px;
+  margin-left:50%;
+  margin-right:50%;
+  margin-top:60px;
+  cursor: pointer;
+}
+
+.componentselector {
+  display: none;
+}
+
+.sizeleft {
+  left:0;
+  margin-left:265px;
+  height:60px;
+  position: fixed;
+  margin-top:50vh;
+  margin-bottom: calc(50vh - 30px);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.sizeleft:hover {
+  transition-duration: 0.5s;
+  margin-left:275px;
+}
+
+.sizeright {
+  right:0;
+  margin-right:265px;
+  height:60px;
+  position: fixed;
+  margin-top:50vh;
+  margin-bottom: calc(50vh - 30px);
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.sizeright:hover {
+  transition-duration: 0.5s;
+  margin-right:275px;
+}
+
+.componentcontainer {
+  width:95%;
+  margin-left:2.5%;
+  height:fit-content;
+  padding:5px;
+  margin: 5px;
+  background: rgb(255, 255, 255);
+}
+
+.componentcontainer img {
+  height:100px;
+  margin:auto;
+}
+
+.componentcontainer .title {
+  font-size:12pt;
+  text-align: center;
+}
+
+.componentcontainer .description{
+  font-size: 10pt;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.149);
+}
+
+
+::-webkit-scrollbar-thumb {
+background: rgba(0, 0, 0, 0.375);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+background: rgba(0, 0, 0, 0.718);
+}

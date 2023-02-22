@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.button-fill {
+  all: unset;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background: #9C00BB;
+  color: #ffffff;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.button-fill:hover {
+  background: #df45fd;
+}

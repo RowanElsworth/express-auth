@@ -1,0 +1,57 @@
+/*=====COLOUR CODES======
+Primary Colour:		#000000		BLACK
+Secondary Colour:	#FFFFFF		WHITE
+Accent 1:		#9C00BB		PURPLE MUNSELL
+Accent 2:		#4700BA		TRYPAN BLUE
+Accent 3:		#0040D5		PERSIAN BLUE		
+Admin Dept:		#D91818		MAXIMUM RED			
+Dev Dept:		#DBA72C		GOLDENROD				
+=======================
+*/
+
+a {
+  text-decoration: none;
+  color: #9C00BB;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 30%;
+  background: #ffffff;
+  padding: 1%;
+  border-radius: 0.5rem;
+  border: solid 2px #cccccc;
+}
+
+label {
+  display: block;
+  color: #9C00BB;
+  font-size: 2.4rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  width: 100%;
+  display: block;
+  font-size: 2.4rem;
+  border: solid 2px #cccccc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 1.75rem;
+}
+
+a {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 0.75rem;
+}
