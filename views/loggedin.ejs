@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logged in page</title>
-  <link rel="stylesheet" href="globalStyles.css">
-  <link rel="stylesheet" href="loggedin.css">
+  <link rel="stylesheet" href="/css/globalStyles.css">
+  <link rel="stylesheet" href="/css/loggedin.css">
   <!-- stops users being able to go back to log in page -->
   <script>
     window.onload = function() {
@@ -30,18 +30,11 @@
   </script>
 </head>
 <body>
-  <!-- last ditch, just in case the auth fails for whatever reason then this will hopefully work :D -->
-  <% if (user && user !== 'not logged in') { %>
-    <%- include('header') %>
-    <h1>This is the logged in page</h1>
-    <p>regular users should not be able to access this page if they are not authenticated :)</p>
-    <a href="/modulebuilder">Module Builder</a>
-
-  <!-- This will display if they don't have auth and the node doesn't work -->
-  <% } else { %>
-    <h1>You are not authenticated to view this page</h1>
-    <a href="/">Click here to log in</a>
-  <% } %>
-
+    <%- include('./partials/header') %>
+    <main>
+      <h1>This is the logged in page</h1>
+      <p>regular users should not be able to access this page if they are not authenticated :)</p>
+      <a href="/modulebuilder">Module Builder</a>
+    </main>
 </body>
 </html>

@@ -4,13 +4,91 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="genstyles.css">
-  <link rel="stylesheet" href="navstyles.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="globalStyles.css">
+  <link rel="stylesheet" href="/css/globalStyles.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/moduleBuilder.css">
+  <script
+    src="https://code.jquery.com/jquery-3.6.3.js"
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous">
+  </script>
   <title>Module Builder</title>
 </head>
 <body>
-  <h1>Hello World</h1>
+  <!-- header -->
+  <%- include('./partials/header.ejs') %>
+  <main>
+    <!-- left panel -->
+    <div class="panel-left">
+      <!-- content for the left panel -->
+    </div>
+    <!-- main builder -->
+    <div class="main-builder">
+      <div class="rows-container">
+        <!-- place where the rows go -->
+      </div>
+      <button class="add-row">Add Row</button>
+      <!-- column selection menu -->
+      <div class="col-selection" style="display:none;">
+        <button class="col-btn" data-cols="1">1 column</button>
+        <button class="col-btn" data-cols="2">2 columns</button>
+        <button class="col-btn" data-cols="3">3 columns</button>
+        <button class="col-btn" data-cols="4">4 columns</button>
+      </div>
+    </div>
+    <!-- right panel -->
+    <div class="panel-right">
+      <!-- content for the right panel (modules) -->
+    </div>
+  </main>
+
+  <script>
+    $(document).ready(function() {
+      // variables
+      const mainBuilder = $('.main-builder');
+      const rowsContainer = $('.rows-container')
+      const addRowBtn = $('.add-row');
+      const colSelection = $('.col-selection');
+      let rowId = 0;
+
+      // Show column selection
+      addRowBtn.on('click', function() {
+        if (colSelection.is(":hidden")) {
+          colSelection.show();
+        } else {
+          colSelection.hide();
+        }
+      });
+
+      // Generate column markup
+      colSelection.on('click', '.col-btn', function(event) {
+        const numCols = $(event.target).data('cols');
+        if (numCols) {
+          const newRow = $('<div></div>', { class: 'row', 'data-row-id': rowId++ });
+
+          // Generate markup template based on the selected number of columns
+          const markup = Array.from({ length: numCols }, () => '<div class="col"></div>').join('');
+          newRow.html(`${markup}<button class="delete-row">Delete</button>`);
+
+          rowsContainer.append(newRow);
+          colSelection.hide();
+        }
+      });
+
+      // Row deletion
+      mainBuilder.on('click', '.rows-container', function(event) {
+        if (event.target.matches('.delete-row')) {
+          const row = $(event.target).parent();
+          const rowIdToDelete = parseInt(row.attr('data-row-id'), 10);
+          row.remove();
+          // Update the row ID for each subsequent row
+          rowsContainer.children('.row').each(function(index) {
+            $(this).attr('data-row-id', index);
+          });
+          rowId--;
+        }
+      });
+    });
+  </script>
 </body>
 </html>

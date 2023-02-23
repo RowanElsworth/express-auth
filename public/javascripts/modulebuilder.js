@@ -1,3 +1,18 @@
+// add row
+function addRow() {
+  var table = document.getElementById("myTable");
+  var tbody = table.getElementsByTagName("tbody")[0];
+
+  var row = document.createElement("tr");
+  var cell1 = document.createElement("td");
+  var cell2 = document.createElement("td");
+
+  row.appendChild(cell1);
+  row.appendChild(cell2);
+  tbody.appendChild(row);
+}
+
+
 function addLayout(x){
   var laymenu = document.getElementById("addlayout");
    x.classList.toggle("change");

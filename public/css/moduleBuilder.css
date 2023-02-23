@@ -1,0 +1,49 @@
+
+:root {
+  --header-height: 70px;
+  --panel-width: 15%;
+}
+
+html {
+  background: darkcyan;
+}
+
+/* Builder */
+main {
+  display: flex;
+}
+
+.panel-left, .panel-right {
+  width: var(--panel-width);
+  height: calc(100vh - var(--header-height));
+  background: #fff;
+}
+
+.main-builder {
+  width: calc(100% - (var(--panel-width) * 2));
+  height: calc(100vh - var(--header-height));
+  border-left: 15px solid darkcyan;
+  border-top: 15px solid darkcyan;
+  border-right: 15px solid darkcyan;
+  background: orange;
+  overflow: auto;
+}
+
+
+/* Buttons */
+
+
+
+/* Modules content */
+.row {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  display: flex;
+}
+
+.col {
+  width: 100%;
+  height: 50px;
+  border: 2px solid black;
+}
