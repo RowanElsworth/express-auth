@@ -23,6 +23,6 @@ html {
   transition-duration: 0.3s;
 }
 
-.button-fill:hover {
+.button-fill:hover, .button-fill:focus {
   background: #df45fd;
 }
